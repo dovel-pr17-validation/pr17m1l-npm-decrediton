@@ -1,0 +1,88 @@
+.isRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  z-index: 99;
+  box-shadow: 5px 0 21px rgba(9, 20, 64, 0.21);
+  background-color: var(--sidebar-color);
+}
+
+.sidebar.animated {
+  transition: width 100ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.sidebar.sidebarReduced {
+  width: var(--sidebar-width-reduced);
+}
+
+.sidebar.sidebarOnBottom {
+  height: 70px;
+  flex-direction: row;
+}
+
+.sidebar.sidebarReduced.sidebarOnBottom > div {
+  flex-direction: row;
+}
+
+.sidebarMain {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.watchOnlyIcon {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: var(--watch-only-icon);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.rescanProgressIndicator {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.linearProgressSmall {
+  border-radius: 0px !important;
+  background-color: var(--input-color-hover) !important;
+}
+
+.linearProgressSmallBar {
+  background: var(--accent-color) !important;
+  border-radius: 0px !important;
+}
+
+@media (--sm-viewport) {
+  .sidebar {
+    display: flex;
+    width: 100% !important;
+  }
+
+  .sidebarMain {
+    overflow: visible;
+  }
+
+  .isShowingAccounts {
+    overflow: hidden;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

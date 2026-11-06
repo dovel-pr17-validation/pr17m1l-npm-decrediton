@@ -1,0 +1,1 @@
+The wallet account used for Lightning Network operations remains unlocked while Lightning is being used. Funds from that account are at risk from anyone with remote or physical access to your computer. It is recommended to use a separate account (or better yet, a separate wallet) with a small amount of funds to minimize the risk.

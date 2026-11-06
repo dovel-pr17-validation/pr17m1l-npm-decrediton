@@ -1,0 +1,1 @@
+Podczas gdy transakcje on-chain wymagają średnio 5 minut na potwierdzenie bloku, transakcje Lightning są przekierowyane do celu niemal natychmiast. Lightning Network składa się z indywidualnych kanałów płatności stworzonych przez różnych użytkowników Decred. Tworzą one sieć węzłów Lightning, które mogą przekierowywać transakcje między sobą.

@@ -1,0 +1,183 @@
+.receiveContent {
+  background-color: var(--background-back-color);
+  padding: 30px 40px;
+  width: 764px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.hadwareWalletWarning {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(248, 215, 218, 1);
+  border-color: rgba(220, 53, 69, 1);
+  color: rgba(114, 28, 36, 1);
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.inputWrapper.amountInputWrapper {
+  align-self: flex-end;
+}
+
+.receiveSelectAmountInput {
+  display: flex;
+}
+.receiveSelectAccountSelect {
+  align-items: center;
+  display: flex !important;
+}
+.receiveSelectAccountSelect a {
+  margin-left: 10px;
+}
+
+.receiveSelectAccountSelectInput {
+  width: 344px;
+}
+
+.requestedAmountInput {
+  width: 246px;
+}
+.receiveRequestedAmount {
+  display: flex;
+  margin-bottom: 20px;
+}
+.receiveContentNestQR {
+  margin-right: 10px;
+  width: 100%;
+  color: var(--main-dark-blue);
+  text-align: center !important;
+  position: relative;
+  padding: 1rem !important;
+}
+
+.receiveContentNestCopyQR {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 41px auto auto auto;
+  width: 118px;
+  height: 35px;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+  transition-duration: 0.5s;
+}
+
+.opacity {
+  opacity: 1 !important;
+}
+
+.receiveContentNestCopyQRText {
+  width: 118px;
+  height: 20px;
+  background-color: var(--background-back-color);
+  box-shadow: 0px 3px 13px var(--icons-shadow);
+  border-radius: 5px;
+  color: var(--link-color);
+  font-size: 9px;
+  font-weight: normal;
+  line-height: 20px;
+  white-space: pre;
+}
+
+.receiveContentNestCopyQRArrow {
+  position: relative;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--background-back-color);
+  margin-left: auto;
+  margin-right: auto;
+  width: 0;
+  height: 0;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+}
+
+.receiveContentCopyButton {
+  margin-right: 10px;
+}
+
+.generateButton {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 550px;
+  width: 215px;
+  height: 44px;
+}
+
+.blueButton {
+  font-size: 16px;
+}
+
+.label {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: var(--grey-7);
+}
+
+@media (--sm-viewport) {
+  .receiveContent {
+    width: 355px;
+    padding: 20px 20px;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+
+  .inputWrapper.amountInputWrapper {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+
+  .requestedAmountInput {
+    width: 290px;
+  }
+
+  .receiveContentNestPrefix {
+    margin-bottom: 10px;
+  }
+
+  .line {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .receiveContentNestQR {
+    margin-bottom: 30px;
+    margin-right: 0;
+    font-size: 16px;
+  }
+
+  .generateButton {
+    margin-left: 142px;
+  }
+
+  .copyParent {
+    margin-left: -28px;
+  }
+}

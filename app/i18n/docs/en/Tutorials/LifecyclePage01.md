@@ -1,0 +1,1 @@
+When a ticket is selected, the holder is rewarded with a chance to vote.  These votes are given a portion of the block's total reward subsidy.  Currently, when 5 votes are selected for a given block they split 80% of the total block subsidy.

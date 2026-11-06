@@ -1,0 +1,85 @@
+.titleArea {
+  float: left;
+  width: 100%;
+  margin-left: 22px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.title {
+  float: left;
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.docButton {
+  outline: none;
+  margin-left: 0.5rem;
+}
+
+.iconSmall {
+  float: left;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-right: 10px;
+}
+
+.iconSmall.new {
+  background-image: var(--create-wallet-icon);
+}
+
+.iconSmall.restore {
+  background-image: var(--restore-wallet-icon);
+}
+
+.advancedOptions {
+  height: 100%;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.advancedOption {
+  margin: 10px;
+}
+
+.advancedOption > .extra {
+  margin: 15px 23px 30px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+
+.daemonLongInput {
+  padding-left: 10px;
+  width: 350px;
+}
+
+.buttonContrainer {
+  clear: both;
+  text-align: right;
+  max-width: 600px;
+}
+
+.gapLimit {
+  display: flex;
+  flex-direction: row;
+}
+
+.gapLimitInput {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.gapLimitDesc {
+  margin-left: 1.1rem;
+  margin-top: 0.5rem;
+  color: var(--text-secondary-color);
+  font-size: var(--font-size-small);
+  font-style: italic;
+}

@@ -1,0 +1,50 @@
+.backButtonWrapper {
+  margin: -20px 0 0 20px;
+}
+
+.hex {
+  width: 694px;
+  display: block;
+}
+
+.confirmSeedLabel {
+  margin-top: 8px;
+  margin-right: 10px;
+  font-size: 13px;
+  line-height: 17px;
+  width: 150px;
+  margin-left: -160px;
+  color: var(--wallet-tutorial-text);
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.seed {
+  align-items: baseline;
+  margin: 10px 0;
+}
+
+.passphraseContainer {
+  width: 694px;
+}
+
+.passphraseInfo {
+  margin: 0 0 20px 0;
+  max-width: 100%;
+  padding-right: 10px;
+}
+
+.passphraseInfo h1 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 10px;
+  color: var(--title-text-and-button-background);
+}
+
+.passphraseInfo p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--main-dark-blue);
+}

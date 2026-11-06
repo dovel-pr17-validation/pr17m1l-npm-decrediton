@@ -1,0 +1,88 @@
+.sortByTooltip,
+.ticketStatusTooltip {
+  font-size: 14px;
+  width: max-content;
+}
+
+.qrTooltip {
+  font-size: 14px;
+  width: 9.5rem;
+}
+
+.ticketsButtons {
+  margin-left: auto;
+  display: flex;
+  line-height: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+.subtitle {
+  width: 100%;
+  display: inline-flex;
+}
+
+.vote {
+  padding: 4px;
+  background-color: rgba(105, 211, 245, 0.3);
+}
+
+.voteAgenda {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 0.2fr;
+  padding: 16px 20px;
+  background-color: var(--sidebar-color);
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: center;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.label {
+  font-size: 14pt;
+  margin-left: 4px;
+}
+
+.menuButton {
+  height: 20px;
+}
+
+.qrButton {
+  margin-left: 10px;
+  background-position: 10px 1px;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 40px;
+  height: 20px;
+  border-radius: 4px;
+  padding: 0;
+  background-image: var(--qrcode);
+  background-color: var(--text-toggle-button-inactive-text);
+}
+
+.qrButton:hover {
+  background-color: var(--filter-menu-bg-hover);
+}
+
+.qrsPaginator {
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.qrsPaginator button {
+  padding: 0 !important;
+}
+
+@media (--sm-viewport) {
+  .tableHeader {
+    display: none;
+  }
+}

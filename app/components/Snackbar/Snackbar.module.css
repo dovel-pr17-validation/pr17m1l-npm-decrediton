@@ -1,0 +1,138 @@
+.snackbar {
+  border-radius: 5px;
+  color: var(--title-text-and-button-background);
+  font-family: var(--font-family-regular);
+  font-size: 13px;
+  line-height: 17px;
+  background-color: var(--background-back-color);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  width: 352px;
+  min-height: 34px;
+  padding: 20px 34px 20px 60px;
+  transition: box-shadow 0.2s;
+  background-position: 15px 15px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  position: fixed;
+}
+
+.snackbarPanel {
+  left: calc(70% - 352px);
+  bottom: 50px;
+  position: fixed;
+  z-index: 100;
+}
+
+.snackbar.snackbarWarning,
+.snackbar.snackbarSimpleMessage,
+.snackbar.snackbarError {
+  background-image: var(--notification-error-icon);
+}
+
+.snackbar.snackbarError {
+  display: flex;
+  align-items: center;
+}
+
+.snackbar.snackbarSuccess {
+  background-image: var(--notification-success-icon);
+}
+
+.snackbarMessage {
+  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+}
+
+.snackbarInformationRow {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.snackbarInformationRowType {
+  width: 50%;
+}
+
+.snackbarInformationRowTypeBold {
+  font-weight: 600;
+}
+
+.snackbarInformationRowAmount {
+  width: 50%;
+  text-align: right;
+}
+
+.snackbarInformationRowFee {
+  width: 50%;
+  text-align: right;
+}
+
+.snackbarInformationRowTx {
+  width: 50%;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.snackbarInformationRowTx a {
+  color: var(--input-color);
+  text-decoration: none;
+}
+
+.snackbarTxMixin {
+  min-height: 40px;
+}
+
+.snackbarStake {
+  background-image: var(--ticket-small-icon);
+}
+
+.snackbarReceive {
+  background-image: var(--plus-big-icon);
+}
+
+.snackbarSend {
+  background-image: var(--minus-big-icon);
+}
+
+.snackbarTicketfee {
+  background-image: var(--ticketfee-transaction-icon);
+}
+
+.snackbarCloseButtonTop {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 10px;
+  width: 10px;
+  background-image: var(--x-grey);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.snackbarCloseButtonTop:focus {
+  outline: 0;
+}
+
+.snackbarCloseButtonTop svg {
+  margin-top: -8px;
+  margin-left: -8px;
+}
+
+.snackbarCloseButtonTop circle {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.snackbarCloseButtonTop circle:last-of-type {
+  stroke: var(--background-back-color);
+}
+
+.copyButton {
+  margin-left: 1rem;
+}

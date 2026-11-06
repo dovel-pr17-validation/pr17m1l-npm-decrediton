@@ -1,0 +1,44 @@
+.wrapper {
+  width: initial !important;
+}
+.label {
+  color: var(--grey-7) !important;
+  line-height: 16px;
+}
+.input {
+  font-family: var(--font-family-regular);
+  color: var(--input-color-default) !important;
+  font-size: 13px !important;
+  line-height: 13px !important;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+.message {
+  padding-left: 5px;
+}
+
+.newBiggerFontStyleInput {
+  font-family: var(--font-family-regular);
+  font-size: 1.6rem !important;
+  line-height: 2.2rem !important;
+}
+.newBiggerFontStyleInput::placeholder {
+  font-size: 1.6rem !important;
+  line-height: 2.2rem !important;
+  color: var(--grey-5) !important;
+}
+
+.input:not(:focus),
+.newBiggerFontStyleInput:not(:focus) {
+  border-bottom: 1px var(--select-stroke-color) solid;
+}
+
+.wrapper.hideIcons > div > svg {
+  display: none;
+}
+.wrapper.hideIcons > div > div {
+  right: 0 !important;
+}
+.wrapper.hideIcons input {
+  padding-right: 26px !important;
+}

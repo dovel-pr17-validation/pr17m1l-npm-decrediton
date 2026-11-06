@@ -1,0 +1,1 @@
+In the past, numerous projects have splintered due to no orderly process to upgrade consensus.  To avoid this, we have instituted a network upgrade process that strives to be as painless and orderly as possible.

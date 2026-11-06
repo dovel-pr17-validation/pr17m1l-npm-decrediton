@@ -1,0 +1,19 @@
+.options {
+  display: flex;
+  margin-left: 35px;
+  padding-right: 2em;
+}
+
+@media (--bg-viewport) {
+  .options {
+    margin: 0 -10px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (--sm-viewport) {
+  .options {
+    flex-direction: column;
+  }
+}

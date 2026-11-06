@@ -1,0 +1,31 @@
+.staticSwitch {
+  height: 100%;
+}
+
+.pageView {
+  height: 100%;
+  width: calc(100% - var(--sidebar-width));
+  position: absolute;
+  right: 0px;
+  background-color: var(--background-container);
+  overflow-x: hidden;
+}
+
+.reducedBar {
+  height: 100%;
+  width: calc(100% - var(--sidebar-width-reduced));
+  position: absolute;
+  right: 0px;
+  background-color: var(--background-container);
+  overflow-x: hidden;
+}
+
+@media (--sm-viewport) {
+  .pageView {
+    width: 100%;
+  }
+
+  .reducedBar {
+    width: 100%;
+  }
+}

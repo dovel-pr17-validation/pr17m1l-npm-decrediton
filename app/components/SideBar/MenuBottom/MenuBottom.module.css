@@ -1,0 +1,140 @@
+.short {
+  position: relative;
+  height: 56px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.shortSeparator {
+  height: 15px;
+  margin-bottom: 12px;
+  background-image: var(--menu-arrow-up);
+  background-position: 50% 8px;
+  background-repeat: no-repeat;
+  padding: 7px 16px 0 16px;
+  background-size: 12px 6px;
+  position: relative;
+}
+
+.shortSeparator::before {
+  content: "";
+  border-bottom: 1px solid var(--short-separator-border);
+  position: absolute;
+  bottom: 0;
+  left: 19px;
+  right: 16px;
+}
+
+.shortSeparator.showAccounts {
+  background-color: var(--background-container-opaque);
+}
+
+.shortName {
+  float: left;
+  color: var(--disabled-color);
+  font-size: 13px;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 36px;
+  margin-left: 4px;
+  background-image: var(--sidebar-balance-icon);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 16px 50%;
+}
+
+.shortValue {
+  float: right;
+  font-family: var(--font-family-regular);
+  color: var(--sidebar-bottom-light-text-color);
+  font-size: 13px;
+  text-align: right;
+  font-weight: 600;
+  padding-right: 16px;
+}
+
+.shortValue .balanceSmall {
+  font-size: 13px;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: var(--info-modal-button-text);
+  font-size: 11px;
+}
+
+.bottomBarContent {
+  color: var(--disabled-color);
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.bottomBarCollapsed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomBarCollapsed > div {
+  margin: 10px;
+}
+
+.settingsLinkCollapsed {
+  margin-bottom: 20px;
+}
+
+.latestBlockWithPeers {
+  display: flex;
+  flex-direction: column;
+}
+
+.latestBlock {
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+
+.latestBlockNumber {
+  font-family: var(--font-family-monospace);
+  color: var(--sidebar-bottom-light-text-color);
+}
+
+.latestBlockTime {
+  color: var(--disabled-color);
+}
+
+.peersCount {
+  display: flex;
+  align-items: center;
+}
+
+.peersCountLabel {
+  color: var(--disabled-color);
+}
+
+.peersCountValue {
+  font-family: var(--font-family-monospace);
+  color: var(--sidebar-bottom-light-text-color);
+}
+
+.rescanButtonAreaCollapsed {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rescanButton.spin {
+  animation: spin 1s linear infinite;
+}
+
+@media (--sm-viewport) {
+  .latestBlock .tooltipContainer span {
+    visibility: hidden;
+  }
+}

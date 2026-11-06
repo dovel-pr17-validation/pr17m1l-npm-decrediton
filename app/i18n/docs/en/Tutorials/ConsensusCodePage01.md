@@ -1,0 +1,1 @@
+Due to the delicate nature of consensus code in a cryptocurrency project, exceptional measures must be undertaken to ensure that it behaves as planned under all possible scenarios.  Decred has some of the top consensus engineers in the world working to develop exciting new ways to improve the Decred ecosystem.

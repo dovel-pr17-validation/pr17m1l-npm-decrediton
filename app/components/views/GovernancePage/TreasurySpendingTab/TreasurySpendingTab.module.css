@@ -1,0 +1,42 @@
+.headerWrapper {
+  background-color: var(--governance-tab-bg);
+}
+
+.pikeysWrapper {
+  margin: 20px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.proposalsLink {
+  color: var(--link-color) !important;
+  cursor: pointer;
+}
+
+.proposalsLink:hover {
+  text-decoration: underline !important;
+}
+
+.cardWrapper {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.tspendTitle {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  color: var(--grey-6);
+}
+
+@media (--bg-viewport) {
+  .pikeysWrapper {
+    margin-left: 35px;
+  }
+}
+
+@media (--sm-viewport) {
+  .pikeysWrapper {
+    margin: 20px;
+    flex-direction: column;
+  }
+}

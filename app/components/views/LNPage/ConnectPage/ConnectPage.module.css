@@ -1,0 +1,49 @@
+.connectOpts {
+  display: flex;
+  flex-direction: column;
+  width: 764px;
+}
+
+.connectOpt {
+  flex-wrap: wrap;
+  display: flex;
+  background-color: var(--background-back-color);
+  padding: 30px 40px;
+}
+
+.buttonContrainer {
+  margin-top: 20px;
+  text-align: right;
+  width: 764px;
+}
+
+.disabledTooltip {
+  width: 17rem;
+  text-align: center;
+}
+
+.logLine {
+  font-family: var(--font-family-mono);
+  margin-top: 2em;
+}
+
+.linearProgress {
+  margin-top: 1em;
+}
+
+@media (--bg-viewport) {
+  .buttonContrainer,
+  .connectOpts {
+    width: 667px;
+  }
+}
+
+@media (--sm-viewport) {
+  .buttonContrainer,
+  .connectOpts {
+    width: 355px;
+  }
+  .connectOpt {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,12 @@
+/prettierrc.js
+/eslintrc.js
+/bin
+/node_modules
+/app/dist
+/app/dist-trezor
+/app/middleware/ln/*_pb.js
+/app/middleware/ln/google/api/*_pb.js
+/app/middleware/walletrpc/*_pb.js
+/app/main.js
+/test/data
+/app/i18n/lib

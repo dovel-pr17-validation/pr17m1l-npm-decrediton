@@ -1,0 +1,1 @@
+Proof-of-Work (PoW) in its most ideal form can provide exceptional ways to create a secure decentralized ledger.  Unfortunately, due to a variety of different reasons, PoW tends to lead to centralization of hash power and therefore, control.  Users should be able to easily mine blocks themselves with meager equipment and have some sort of return for the work they provided.  

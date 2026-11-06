@@ -1,0 +1,203 @@
+import { isTestNet } from "selectors";
+import { equalElements } from "helpers";
+import { wallet } from "wallet-preload-shim";
+import * as sel from "selectors";
+import { closeWalletRequest } from "actions/WalletLoaderActions";
+import { closeDaemonRequest, backToCredentials } from "actions/DaemonActions";
+import {
+  getTreasuryBalance,
+  resetTreasuryBalance
+} from "actions/ClientActions";
+import { EXTERNALREQUEST_DCRDATA, EXTERNALREQUEST_POLITEIA } from "constants";
+import {
+  getTokenAndInitialBatch,
+  resetInventoryAndProposals
+} from "actions/GovernanceActions";
+import * as configConstants from "constants/config";
+
+export const SETTINGS_SAVE = "SETTINGS_SAVE";
+export const SETTINGS_CHANGED = "SETTINGS_CHANGED";
+export const SETTINGS_UNCHANGED = "SETTINGS_UNCHANGED";
+
+export const saveSettings = (settings) => async (dispatch, getState) => {
+  const {
+    settings: {
+      needNetworkReset,
+      currentSettings: { locale }
+    }
+  } = getState();
+  const {
+    daemon: { walletName }
+  } = getState();
+
+  const config = wallet.getGlobalCfg();
+  const oldAllowedExternalRequests = config.get(
+    configConstants.ALLOWED_EXTERNAL_REQUESTS
+  );
+  const updatedProxy =
+    config.get(configConstants.PROXY_TYPE) !== settings.proxyType ||
+    config.get(configConstants.PROXY_LOCATION) !== settings.proxyLocation;
+
+  config.set(configConstants.LOCALE, settings.locale);
+  config.set(configConstants.DAEMON_ADVANCED, settings.daemonStartAdvanced);
+  config.set(configConstants.PROXY_TYPE, settings.proxyType);
+  config.set(
+    configConstants.ALLOWED_EXTERNAL_REQUESTS,
+    settings.allowedExternalRequests
+  );
+  config.set(configConstants.PROXY_LOCATION, settings.proxyLocation);
+  config.set(configConstants.TIMEZONE, settings.timezone);
+  config.set(configConstants.SPV_MODE, settings.spvMode);
+  config.set(configConstants.SPV_CONNECT, settings.spvConnect);
+  config.set(configConstants.NETWORK, settings.network);
+  config.set(configConstants.THEME, settings.theme);
+  config.set(configConstants.UI_ANIMATIONS, settings.uiAnimations);
+  config.set(
+    configConstants.AUTO_WALLET_LAUNCHING,
+    settings.autoWalletLaunching
+  );
+
+  if (walletName) {
+    const walletConfig = wallet.getWalletCfg(isTestNet(getState()), walletName);
+    walletConfig.set(
+      configConstants.CURRENCY_DISPLAY,
+      settings.currencyDisplay
+    );
+  }
+
+  if (
+    !equalElements(
+      oldAllowedExternalRequests ?? [],
+      settings.allowedExternalRequests
+    )
+  ) {
+    wallet.reloadAllowedExternalRequests();
+  }
+
+  if (locale != settings.locale) {
+    wallet.changeMenuLocale(settings.locale);
+  }
+
+  const newDcrdataEnabled =
+    settings.allowedExternalRequests.indexOf(EXTERNALREQUEST_DCRDATA) > -1;
+  if (newDcrdataEnabled === true) {
+    dispatch(getTreasuryBalance());
+  }
+  if (newDcrdataEnabled === false) {
+    dispatch(resetTreasuryBalance());
+  }
+
+  dispatch({ settings, type: SETTINGS_SAVE });
+
+  if (updatedProxy) {
+    wallet.setupProxy();
+  }
+
+  if (needNetworkReset || updatedProxy) {
+    await dispatch(closeWalletRequest());
+    await dispatch(closeDaemonRequest());
+    dispatch(backToCredentials());
+  }
+
+  // This should happen after dispatching `SETTINGS_SAVE` action
+  const newPoliteiaEnabled =
+    settings.allowedExternalRequests.indexOf(EXTERNALREQUEST_POLITEIA) > -1;
+  if (newPoliteiaEnabled === true) {
+    dispatch(getTokenAndInitialBatch());
+  }
+  if (newPoliteiaEnabled === false) {
+    dispatch(resetInventoryAndProposals());
+  }
+};
+
+export const ALLOWEDEXTERNALREQUESTS_ADDED = "ALLOWEDEXTERNALREQUESTS_ADDED";
+export const addAllowedExternalRequest =
+  (requestType) => (dispatch, getState) =>
+    new Promise((resolve) => {
+      const config = wallet.getGlobalCfg();
+      const allowed = config.get(configConstants.ALLOWED_EXTERNAL_REQUESTS);
+
+      if (allowed.indexOf(requestType) > -1) return resolve(true);
+
+      allowed.push(requestType);
+      config.set(configConstants.ALLOWED_EXTERNAL_REQUESTS, allowed);
+      wallet.allowExternalRequest(requestType);
+
+      const {
+        settings: { currentSettings, tempSettings }
+      } = getState();
+      const newSettings = { ...currentSettings };
+      newSettings.allowedExternalRequests = allowed;
+
+      // Also modify temp settings, given that it may be different than the current
+      // settings.
+      const newTempSettings = { ...tempSettings };
+      newTempSettings.allowedExternalRequests = [
+        ...newTempSettings.allowedExternalRequests
+      ];
+      if (newTempSettings.allowedExternalRequests.indexOf(requestType) === -1) {
+        newTempSettings.allowedExternalRequests.push(requestType);
+      }
+
+      dispatch({
+        newSettings,
+        newTempSettings,
+        type: ALLOWEDEXTERNALREQUESTS_ADDED,
+        requestType
+      });
+      resolve(true);
+    });
+
+export function updateStateSettingsChanged(settings, norestart) {
+  return (dispatch, getState) => {
+    const { tempSettings, currentSettings } = getState().settings;
+    const newSettings = { ...tempSettings, ...settings };
+    const settingsFields = Object.keys(tempSettings);
+    const networkChange = {
+      network: true,
+      spvMode: true,
+      daemonStartAdvanced: true,
+      proxyType: true,
+      proxyLocation: true
+    };
+
+    const newDiffersFromTemp = settingsFields.reduce(
+      (d, f) => d || newSettings[f] !== tempSettings[f],
+      false
+    );
+
+    if (newDiffersFromTemp) {
+      const newDiffersFromCurrent = settingsFields.reduce(
+        (d, f) => d || newSettings[f] !== currentSettings[f],
+        false
+      );
+      const needNetworkReset =
+        !norestart &&
+        Object.keys(networkChange).reduce(
+          (d, f) => d || newSettings[f] !== currentSettings[f],
+          false
+        );
+      newDiffersFromCurrent
+        ? dispatch({
+            tempSettings: newSettings,
+            needNetworkReset,
+            type: SETTINGS_CHANGED
+          })
+        : dispatch({ tempSettings: currentSettings, type: SETTINGS_UNCHANGED });
+    }
+  };
+}
+
+export const resetSettingsState = () => {
+  return (dispatch, getState) => {
+    const { currentSettings } = getState().settings;
+    dispatch({ tempSettings: currentSettings, type: SETTINGS_UNCHANGED });
+  };
+};
+
+export const setNeedsVSPdProcessTickets = (value) => (dispatch, getState) => {
+  const walletName = sel.getWalletName(getState());
+  const isTestNet = sel.isTestNet(getState());
+  const walletConfig = wallet.getWalletCfg(isTestNet, walletName);
+  walletConfig.set(configConstants.NEEDS_VSPD_PROCESS_TICKETS, value);
+};

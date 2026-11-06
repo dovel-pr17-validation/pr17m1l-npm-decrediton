@@ -1,0 +1,30 @@
+.toolbar {
+  height: 29px;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.docButton {
+  outline: none;
+  margin-left: 1rem;
+}
+
+.button {
+  padding: 5px 16px 10px 16px;
+}
+
+.input {
+  width: 20rem;
+  margin-right: 0.5em;
+}
+
+@media (--sm-viewport) {
+  .button {
+    padding: 6px 20px;
+  }
+}

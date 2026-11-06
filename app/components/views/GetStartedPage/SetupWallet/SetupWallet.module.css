@@ -1,0 +1,6 @@
+.loaderBar {
+  height: 6rem;
+}
+.setupWallet {
+  background-image: var(--loader-animation-finalizing-setup) !important;
+}

@@ -1,0 +1,33 @@
+.circleTooltip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 6px;
+}
+.rowLegend {
+  padding-bottom: 10px;
+}
+.chartTooltip {
+  background-color: var(--background-container);
+  padding: 10px;
+  border-radius: 10px;
+}
+.chartTooltipValue {
+  display: inline-block;
+  margin-left: 0.2em;
+}
+.tooltipLine {
+  display: flex;
+  flex-direction: row;
+}
+.xAxis,
+.yAxis text {
+  fill: var(--chart-axis-text);
+}
+.xAxis,
+.yAxis line {
+  stroke: var(--chart-axis-stroke);
+}
+.recharts-tooltip-cursor {
+  fill: var(--chart-cursor-color);
+}

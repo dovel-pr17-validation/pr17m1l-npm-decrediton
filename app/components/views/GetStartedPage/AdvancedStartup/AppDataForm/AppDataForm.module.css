@@ -1,0 +1,9 @@
+@media (--sm-viewport) {
+  .label {
+    width: 130px;
+  }
+
+  .input {
+    width: 190px;
+  }
+}

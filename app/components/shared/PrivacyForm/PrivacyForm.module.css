@@ -1,0 +1,59 @@
+.privacyForm {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: max-content 123px max-content 123px;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  align-items: center;
+  color: var(--mixer-settings-label);
+}
+.error {
+  color: var(--error-text-color);
+}
+.isRow {
+  display: flex;
+  flex-direction: row;
+}
+.bold {
+  font-weight: 700;
+}
+.select {
+  width: 300px;
+}
+.item {
+  margin: 0 30px 20px 0;
+}
+.item.error {
+  color: red;
+}
+.area {
+  margin-left: auto;
+}
+.row {
+  margin-bottom: 10px;
+}
+.textInput {
+  height: 22px;
+}
+.privacyForm label {
+  text-align: right;
+}
+.accountBranch,
+.accountBranch input {
+  width: 30px;
+}
+
+.privacyForm input:disabled {
+  color: var(--mixer-settings-disabled);
+}
+
+@media (--sm-viewport) {
+  .privacyForm {
+    display: grid;
+    grid-template-columns: max-content 200px;
+  }
+  .accountBranch,
+  .accountBranchLabel {
+    grid-row: 5;
+  }
+}

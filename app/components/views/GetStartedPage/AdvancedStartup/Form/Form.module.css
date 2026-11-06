@@ -1,0 +1,31 @@
+.advancedDesc {
+  font-size: 19px;
+  color: var(--modal-text);
+  margin-bottom: 43px;
+  margin-top: 60px;
+  width: 444px;
+  float: left;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  clear: left;
+}
+
+.toggleLabel {
+  margin-left: 1rem;
+}
+
+.togglable {
+  padding-top: 25px;
+  height: 258px;
+}
+
+@media (--sm-viewport) {
+  .advancedDesc {
+    width: 315px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,40 @@
+.tabbedPageSubtitle {
+  color: var(--grey-6);
+  font-size: 24px;
+  line-height: 25px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  width: 740px;
+  clear: both;
+}
+
+.tabbedPageSubtitle.export {
+  margin-top: -20px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.docButton {
+  outline: none;
+  margin-left: 0.5rem;
+}
+
+@media (--bg-viewport) {
+  .tabbedPageSubtitle {
+    margin-left: 0;
+    width: 667px;
+  }
+}
+
+@media (--sm-viewport) {
+  .tabbedPageSubtitle {
+    width: 355px;
+    margin-left: 0;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}

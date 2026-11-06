@@ -1,0 +1,1 @@
+Proof-of-Stake (PoS) provides a way for those with true "skin-in-the-game" to have a direct effect on the production of blocks.  Though with pure PoS, block creation leads to centralization once again.  

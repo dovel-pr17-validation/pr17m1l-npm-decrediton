@@ -1,0 +1,59 @@
+.isRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.historyContainer {
+  margin-left: auto;
+}
+
+.historySearchTx {
+  display: inline-block;
+  min-width: 15rem;
+}
+
+.historyPageContent {
+  width: 740px;
+  height: 100%;
+}
+
+.sortByTooltip {
+  font-size: 14px;
+  line-height: 15px;
+  width: max-content;
+}
+
+.typeTooltip {
+  font-size: 14px;
+  line-height: 15px;
+  width: max-content;
+}
+
+@media (--bg-viewport) {
+  .historyPageContent {
+    width: 667px;
+  }
+}
+
+@media (--sm-viewport) {
+  .historyPageContent {
+    width: 355px;
+  }
+
+  .historyContainer {
+    margin: 15px 0 0 0;
+  }
+
+  .historyContentTitle {
+    width: 355px;
+    margin-left: 0;
+  }
+
+  .isRow {
+    flex-direction: column;
+  }
+
+  .historySearchTx {
+    width: 255px;
+  }
+}

@@ -1,0 +1,1 @@
+The Consensus Vote at the core requires 75% of the votes to be one way or another for the vote to be finalized.  And for a vote to be considered valid, the total number of votes must be above the base quorom of 10%.  

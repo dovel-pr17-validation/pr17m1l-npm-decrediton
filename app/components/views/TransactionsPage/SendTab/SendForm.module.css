@@ -1,0 +1,117 @@
+.isRow {
+  display: flex;
+  flex-direction: row;
+}
+.sendArea {
+  background-color: var(--background-back-color);
+  width: 740px;
+  margin-bottom: 20px;
+}
+.detailsArea {
+  width: 318px;
+  height: 215px;
+  padding: 30px 20px 0 0;
+  font-size: 13px;
+  color: var(--account-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.detailsValueColumn {
+  text-align: right;
+  flex-grow: 1;
+  color: var(--main-dark-blue);
+  padding-bottom: 10px;
+}
+.detailsUnit {
+  color: var(--main-dark-blue);
+}
+.detailsLabelColumn {
+  white-space: nowrap;
+  text-align: right;
+  padding-left: 20px;
+}
+.detailsLabelColumn div,
+.detailsValueColumn div {
+  padding-bottom: 10px;
+}
+.sendButtonArea {
+  text-align: right;
+}
+.sendButtonArea button {
+  font-size: 16px;
+}
+.passphraseModal {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.passphraseModalLabel {
+  margin-top: 5px;
+  grid-column: 1;
+}
+.passphraseModalAddress {
+  margin-left: 20px;
+  margin-top: 5px;
+  font-weight: 600;
+  grid-column: 2;
+}
+.passphraseModalBalance {
+  margin-left: 20px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.error {
+  color: var(--error-text-color);
+}
+
+.listUtxoLink {
+  font-size: 9pt;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: auto;
+}
+.disabledTooltip {
+  width: 17rem;
+  text-align: center;
+  color: var(--input-color-default);
+}
+
+@media (--lg-viewport) {
+  .sendArea {
+    width: 667px;
+  }
+  .detailsLabelColumn {
+    padding-left: 10px;
+  }
+  .detailsArea {
+    padding: 30px 20px 0 0;
+  }
+}
+
+@media (--sm-viewport) {
+  .isRow.sendArea {
+    flex-direction: column;
+    height: auto;
+  }
+  .sendArea {
+    width: 355px;
+  }
+  .sendButtonArea {
+    width: 355px;
+    margin-top: 10px;
+  }
+  .detailsArea {
+    display: flex;
+    width: 340px;
+    height: 147px;
+    padding: 30px 20px 30px 0;
+  }
+  .detailsValueColumn {
+    padding-top: 20px;
+    padding-left: 25px;
+  }
+  .detailsLabelColumn {
+    padding-top: 20px;
+    padding-left: 70px;
+  }
+}

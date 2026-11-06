@@ -1,0 +1,1 @@
+If a ticket is called to vote but doesn't respond in time, the ticket is considered 'missed'.  This missed ticket will result in a revocation which allows for the ticket funds to be given back to the ticket holder.  This is the similar process for when a ticket expires after ~144 days.  The revocations are currently automatically created according to consensus rules.

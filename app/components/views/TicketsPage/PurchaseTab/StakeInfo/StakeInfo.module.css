@@ -1,0 +1,158 @@
+.accordion {
+  margin-bottom: 30px;
+}
+
+.accordionArrow {
+  top: 15px;
+  right: 20px;
+  height: 13px;
+  transform: rotate(90deg);
+}
+.activeAccordionArrow {
+  transform: rotate(-90deg) !important;
+}
+
+.area {
+  background-color: var(--background-back-color);
+  padding: 30px 40px 20px 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(max-content, 1fr));
+}
+
+.purchaseTicketFoot {
+  border-bottom: 1px var(--tx-detail-text) solid;
+}
+
+.balance {
+  display: inline;
+}
+
+.detailsBorder {
+  background-color: var(--background-back-color);
+}
+
+.details {
+  height: 100px;
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 1fr) auto;
+  row-gap: 11px;
+  padding: 24px 0 30px 0;
+  margin: 0 40px;
+  background-color: var(--background-back-color);
+  border-top: 1px solid var(--stakeinfo-border);
+}
+
+.stakeInfo {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.label {
+  vertical-align: middle;
+  line-height: 16px;
+  font-size: 13px;
+  color: var(--purchase-label);
+  margin-bottom: 10px;
+}
+
+.value {
+  vertical-align: middle;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stakeinfo-value);
+}
+
+.foot {
+  vertical-align: middle;
+  white-space: pre;
+  line-height: 15px;
+  font-size: 11px;
+  color: var(--tx-detail-text);
+}
+
+.detail {
+  line-height: 22px;
+  font-size: 13px;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.detailIcon {
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.detail:nth-child(3),
+.detail:nth-child(6) {
+  justify-content: flex-end;
+}
+
+.detailLabel {
+  padding-left: 11px;
+}
+
+.detailValue {
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.detailIconExpired {
+  background-image: var(--ticket-expired);
+}
+
+.detailIconImmature {
+  background-image: var(--ticket-immature);
+}
+
+.detailIconLive {
+  background-image: var(--ticket-live);
+}
+
+.detailIconMissed {
+  background-image: var(--ticket-missed);
+}
+
+.detailIconRevoked {
+  background-image: var(--ticket-revoked);
+}
+
+.detailIconUnmined {
+  background-image: var(--ticket-unmined);
+}
+
+.detailIconVoted {
+  background-image: var(--ticket-voted);
+}
+
+@media (--sm-viewport) {
+  .accordion {
+    margin-bottom: 30px;
+  }
+
+  .area {
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    grid-gap: 20px;
+    padding: 30px 20px;
+  }
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 15px 0 10px;
+    grid-gap: 12px;
+    height: 135px;
+  }
+  .detail:nth-child(3),
+  .detail:nth-child(6) {
+    justify-content: flex-start;
+  }
+  .detail:nth-child(even) {
+    justify-content: flex-end;
+  }
+  .detailLabel {
+    padding-left: 2px;
+  }
+}

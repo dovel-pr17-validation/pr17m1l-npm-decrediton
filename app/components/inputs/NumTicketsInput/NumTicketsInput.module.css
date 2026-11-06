@@ -1,0 +1,47 @@
+.container {
+  height: 24px;
+  width: 183px;
+  position: relative;
+}
+.integerInputWrapper {
+  width: 122px !important;
+}
+.integerInput {
+  padding-right: 52px;
+}
+.integerInput.invalid {
+  padding-right: 70px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  background-size: 9px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: var(--accent-blue);
+  border-radius: 5px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+}
+.icon.more {
+  background-image: var(--tickets-plus-icon);
+  right: 0;
+}
+.icon.more:hover {
+  opacity: 0.7;
+}
+.icon.less {
+  background-image: var(--tickets-minus-icon);
+  right: 29px;
+}
+.icon.less:hover {
+  opacity: 0.7;
+}
+.ticketUnitLabel {
+  color: var(--grey-5);
+  font-size: 16px;
+  line-height: 16px !important;
+}

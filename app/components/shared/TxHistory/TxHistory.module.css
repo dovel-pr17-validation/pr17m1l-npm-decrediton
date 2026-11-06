@@ -1,0 +1,480 @@
+.iconContainer {
+  grid-row: 1/3;
+  align-self: center;
+  grid-column: 1;
+}
+
+.icon {
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.icon.sent {
+  background-image: var(--minus-small-icon);
+}
+.icon.received,
+.icon.coinbase {
+  background-image: var(--plus-small-icon);
+}
+.icon.mixed {
+  background-image: var(--mixed-transaction-icon);
+}
+.icon.ticketfee {
+  background-image: var(--ticketfee-transaction-icon);
+}
+.icon.self {
+  background-image: var(--self-transaction-icon);
+}
+.icon.unknown,
+.icon.ticket {
+  background-image: var(--ticket-live-icon);
+}
+.icon.live {
+  background-image: var(--ticket-live-icon);
+}
+.icon.vote {
+  background-image: var(--ticket-voted-icon);
+}
+.icon.voted {
+  background-image: var(--ticket-voted-icon);
+}
+.icon.revocation {
+  background-image: var(--ticket-revoked-icon);
+}
+.icon.revoked {
+  background-image: var(--ticket-revoked-icon);
+}
+.icon.immature {
+  background-image: var(--ticket-immature-icon);
+}
+.icon.missed {
+  background-image: var(--ticket-missed-icon);
+}
+.icon.expired {
+  background-image: var(--ticket-expired-icon);
+}
+.icon.unmined {
+  background-image: var(--ticket-unmined-icon);
+}
+
+.amountValue {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-family: var(--font-family-regular-semi-bold);
+  margin-left: 10px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 0.5fr 3.5fr 10fr 3fr;
+  width: 100%;
+}
+
+.overviewInfo {
+  display: grid;
+  grid-template-columns: 0.5fr 3fr 10fr;
+}
+
+.overviewInfo .txDirection {
+  align-self: center;
+  order: 4;
+  grid-column-start: 2;
+  justify-self: left;
+  grid-column-end: 4;
+  padding-bottom: 3px;
+  color: var(--overview-balance-label) !important;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.overviewInfo .txDirection .accountName {
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.status {
+  margin-left: 5px;
+  max-width: 210px;
+}
+
+.txDirection {
+  justify-self: right;
+}
+
+.direction {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.overviewInfo .txDirection .direction.isCred {
+  margin-left: 0.5em;
+}
+
+.accountName {
+  background-color: var(--transaction-account-name-bg);
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 20px;
+  margin-right: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.overviewInfo .accountName {
+  margin-right: 0;
+}
+
+.overviewRow .feeStatus {
+  width: 75px;
+}
+
+.feeStatus {
+  font-size: 11px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  text-align: center;
+}
+
+.timeDateSpacer {
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  text-align: right;
+  grid-column: 6;
+  grid-row: 1;
+}
+
+.info .timeDateSpacer {
+  grid-column: 4;
+  grid-row: 1;
+  align-self: center;
+}
+
+.myTickets.overview .timeDateSpacer {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.overviewPending .txInfo {
+  width: 100%;
+}
+
+.myTickets {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr;
+  width: 100%;
+}
+
+.myTickets.overview {
+  grid-template-columns: 0.5fr 3fr 10fr;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  align-items: center;
+  color: var(--overview-balance-label) !important;
+}
+
+.myTickets.overview.live {
+  grid-template-columns: 1fr 1fr;
+}
+
+.stakeType {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-family: var(--font-family-regular);
+  color: var(--input-color-default);
+  margin-left: 10px;
+  grid-column: 1;
+  grid-row: 1;
+  padding-left: 2rem;
+}
+
+.myTickets.overview .stakeType {
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 0;
+}
+
+.ticketPriceContainer {
+  grid-column: 2;
+  grid-row: 1;
+}
+.myTickets.overview .ticketPriceContainer {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.ticketDetailsContainer {
+  display: contents;
+}
+
+.myTickets.overview .ticketDetailsContainer {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feeStatusContainer {
+  grid-column: 5;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  background-color: var(--transaction-account-name-bg);
+  padding: 2px;
+  border-radius: 5px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.myTickets.overview .feeStatusContainer {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: flex-end;
+  width: max-content;
+  margin-right: 0;
+}
+
+.ticketRewardContainer {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.daysToVoteContainer {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.ticketReward {
+  background-image: var(--ticket-reward-icon);
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position: 0px center;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--grey-6);
+}
+
+.daysToVote {
+  background-image: var(--time-lock-icon);
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  background-position: 0px center;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--grey-6);
+}
+
+.myTickets.overview .daysToVote {
+  margin-left: 2em;
+}
+
+.ticketPrice {
+  font-size: 1.5rem;
+  color: var(--grey-6);
+  font-weight: 600;
+}
+
+.myTickets.overview .ticketPrice {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+
+.ticketPriceSecondary,
+.ticketPriceUnit {
+  color: var(--grey-6);
+  font-weight: 600;
+}
+
+.myTickets.overview .ticketPriceSecondary,
+.ticketPriceUnit {
+  font-weight: 400;
+}
+
+.overviewRow {
+  width: 375px;
+  height: 6.3rem;
+  background: var(--background-back-color);
+  border-bottom: 1px solid var(--disabled-background-color);
+  cursor: pointer;
+}
+
+.txInfo {
+  display: flex;
+}
+
+.overviewRow .txInfo .txRowWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  flex-basis: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pendingOverviewDetails {
+  background-color: var(--disabled-background-color-lighter);
+  background-image: var(--pending-animation);
+  background-size: 14px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 40px;
+  flex-basis: 40px;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.overviewRow .timeDateSpacer {
+  margin-left: auto;
+}
+
+.historyRow {
+  background-image: var(--arrow-right-gray-icon);
+  background-position: 98%;
+  background-size: 5px;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--disabled-background-color);
+  background-color: var(--background-back-color);
+  cursor: pointer;
+  height: 54px;
+}
+
+.historyRow.activeRow {
+  border-left: 0.4rem solid var(--accent-color);
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.16));
+}
+
+.historyRow:hover {
+  background-image: var(--arrow-right-blue-icon);
+  background-color: var(--tx-history-background-hover);
+}
+
+.historyRow .txInfo {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.historyRow .txInfo .txRowWrapper {
+  padding: 16px 20px;
+  width: 96%;
+}
+
+.eligibleRow {
+  background-position: 688px;
+}
+
+.historyRow.eligibleRow .txInfo .txRowWrapper {
+  padding: 16px 20px 16px 20px;
+  width: 100%;
+}
+
+.historyRow.activeRow .txInfo .txRowWrapper {
+  padding-left: 1.6rem;
+}
+
+.overviewRow .txInfo .myTickets .timeDateSpacer {
+  background: none;
+  color: var(--input-color-default);
+}
+
+.overviewRow .txInfo .stakeAccount {
+  display: none !important;
+}
+
+.pendingLabel {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+@media (--bg-viewport) {
+  .info {
+    grid-template-columns: 0.5fr 3.5fr 10fr 3fr;
+  }
+  .info.overviewInfo {
+    grid-template-columns: 0.5fr 3fr 10fr;
+  }
+  .accountName {
+    max-width: 150px;
+  }
+  .overviewRow {
+    width: 100%;
+  }
+}
+
+@media (--sm-viewport) {
+  .overviewRow {
+    width: 355px;
+  }
+  .historyRow {
+    width: 100%;
+  }
+  .accountName {
+    background: transparent;
+  }
+  .feeStatus {
+    width: 70px;
+  }
+  .status {
+    padding-top: 0px;
+  }
+  .txDirection {
+    align-self: center;
+    order: 4;
+    grid-column-start: 1;
+    justify-self: left;
+    grid-column-end: 4;
+    font-size: 11px;
+    padding-bottom: 3px;
+    color: var(--overview-balance-label) !important;
+    font-family: var(--font-family-monospace);
+  }
+  .txRowWrapper {
+    padding: 8px 20px 27px 10px !important;
+  }
+  .info {
+    grid-template-columns: 0.5fr 4fr 2fr;
+    padding-bottom: 1rem;
+  }
+  .myTickets {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 1rem;
+    font-size: 11px;
+    align-items: stretch;
+    color: var(--overview-balance-label) !important;
+    font-family: var(--font-family-monospace);
+  }
+
+  .ticketStatus {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: var(--input-color-default);
+  }
+  .stakeAccount {
+    display: none !important;
+  }
+  .myTickets .timeDateSpacer {
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    justify-self: right;
+    background: none;
+    color: var(--input-color-default);
+  }
+}

@@ -1,0 +1,70 @@
+.loadingError {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--background-container);
+  width: 300px;
+  height: 200px;
+  font-size: 120%;
+  text-align: center;
+}
+
+.reloadButton {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 100px;
+}
+
+.cancelButton {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 100px;
+}
+
+.messageDescription {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--modal-text);
+}
+
+.collapse {
+  background-color: var(--info-message-background);
+  display: grid;
+  grid-template-columns: 30fr 1fr;
+  grid-row-gap: 10px;
+  padding: 10px 10px 10px 20px;
+  cursor: pointer;
+}
+
+.collapse.info {
+  background-image: var(--tickets-info-icon);
+  background-position-x: 10px;
+  background-position-y: 10px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 40px;
+}
+
+.collapse > .content {
+  width: 100%;
+  cursor: default;
+}
+
+.collapse > .readMoreIcon {
+  background-image: var(--arrow-down-mid-blue-icon);
+  background-position-x: right;
+  background-position-y: 8px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  height: 15px;
+  width: 12px;
+  margin-left: auto;
+}
+
+.collapse > .readMoreIcon.active {
+  transform: rotate(180deg);
+  background-position-y: 0px;
+}

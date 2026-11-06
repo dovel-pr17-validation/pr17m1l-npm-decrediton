@@ -1,0 +1,86 @@
+.container {
+  color: var(--title-text-and-button-background);
+  padding: 8.3rem 0 0 0;
+  position: relative;
+}
+
+.topLinks {
+  position: absolute;
+  right: 15px;
+  top: -25px;
+  margin: inherit;
+  user-select: none;
+}
+
+.blockchainSyncing {
+  background-image: var(--loader-animation-blockchain-syncing) !important;
+}
+
+.daemonWaiting {
+  background-image: var(--loader-animation-daemon-waiting) !important;
+}
+
+.daemonWaiting.initial {
+  background-image: var(--loader-animation-daemon-waiting-initial) !important;
+}
+
+.discoveringAddresses {
+  background-image: var(--loader-animation-discovering-addresses) !important;
+}
+
+.establishingRpc {
+  background-image: var(--loader-animation-establishing-rpc) !important;
+}
+
+.fetchingHeaders {
+  background-image: var(--loader-animation-fetching-headers) !important;
+}
+
+.finalizingSetup {
+  background-image: var(--loader-animation-finalizing-setup) !important;
+}
+
+.scanningBlocks {
+  background-image: var(--loader-animation-scanning-blocks) !important;
+}
+
+.updateAvailableLink {
+  color: var(--input-color);
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+  padding: 12px 30px 14px 30px;
+  outline: none;
+}
+.updateAvailableLink:hover {
+  color: var(--input-color-hover);
+}
+.updateAvailableTooltip {
+  width: max-content;
+  text-align: center;
+}
+
+.invisibleButton {
+  padding: 1.2rem 1.5rem 1.4rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: var(--launcher-link-color);
+}
+
+@media (--sm-viewport) {
+  .container {
+    padding-top: 23px;
+    margin-left: 0;
+  }
+
+  .topLinks {
+    top: -4rem;
+    right: -1rem;
+  }
+
+  .tutorialButton,
+  .releaseNotesButton {
+    display: none;
+  }
+}

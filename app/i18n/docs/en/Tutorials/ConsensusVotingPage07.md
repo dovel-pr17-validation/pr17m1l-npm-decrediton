@@ -1,0 +1,1 @@
+This upgrade and voting process allows for all ticket holders to be able to have their voices heard and lets the network smoothly update the consensus rules.  

@@ -1,0 +1,14 @@
+.seedArea {
+  margin: 0 5px 5px -5px;
+  width: 560px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: baseline;
+}
+
+@media (--sm-viewport) {
+  .seedArea {
+    grid-template-columns: repeat(3, 1fr);
+    width: 353px;
+  }
+}

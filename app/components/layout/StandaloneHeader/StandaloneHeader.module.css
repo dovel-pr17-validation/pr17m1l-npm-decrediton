@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--background-back-color);
+  padding: 40px 60px 25px 60px;
+}
+
+@media (--bg-viewport) {
+  .header {
+    padding-left: 20px;
+  }
+}
+
+@media (--sm-viewport) {
+  .header {
+    height: initial;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}

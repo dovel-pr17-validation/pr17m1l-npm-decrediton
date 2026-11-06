@@ -1,0 +1,8 @@
+.dangerButton {
+  background-color: var(--error-red);
+  color: var(--background-back-color);
+}
+
+.dangerButton:hover {
+  background-color: var(--error-red-hover);
+}

@@ -1,0 +1,1 @@
+Statistically, tickets have approximately a 50% chance of being selected within the first 28 days.  When a ticket is called to vote the owner can submit a vote, which then allows them to receive the ticket price plus the vote reward in return.

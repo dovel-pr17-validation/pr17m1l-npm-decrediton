@@ -1,0 +1,9 @@
+.tooltip {
+  width: 11.5rem;
+}
+
+.spinner {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}

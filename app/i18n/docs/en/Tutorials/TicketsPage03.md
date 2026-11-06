@@ -1,0 +1,1 @@
+As an incentive for time-locking DCR for tickets, those that are selected to vote are given a portion of the total block subsidy as a reward.  

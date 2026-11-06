@@ -1,0 +1,20 @@
+.small {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.tiny {
+  font-size: 0.43em;
+}
+
+.block {
+  display: block;
+}
+
+.title {
+  font-size: 0.4815em;
+}
+
+.base {
+  color: var(--account-text);
+}

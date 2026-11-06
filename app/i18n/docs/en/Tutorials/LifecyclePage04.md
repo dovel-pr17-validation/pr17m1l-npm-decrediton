@@ -1,0 +1,1 @@
+When a ticket is 'Live' they have the same chances of being selected as all of the other tickets currently in the ticket pool.  The ticket pool aims to be approximately 40960.  To attempt to maintain this ideal pool size, the ticket price will vary based on whether the ticket pool is above or below that ideal size. 

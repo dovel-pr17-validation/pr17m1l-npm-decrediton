@@ -1,0 +1,173 @@
+.sendOutputContainer {
+  display: flex;
+  margin: 30px 0 30px 40px;
+  padding-right: 20px;
+  flex-direction: column;
+  width: 406px;
+  border-right: 1px solid var(--send-transaction-border);
+}
+.sendOutputContainer.plus {
+  border-right: none;
+}
+.addButton {
+  margin-top: 8px;
+}
+.addButton.blue {
+  background-color: var(--accent-blue) !important;
+}
+.delete {
+  background-color: var(--grey-7) !important;
+  margin-top: 8px;
+}
+
+.selfAccount {
+  margin-left: 1rem;
+}
+
+.amountContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+}
+.amountContainer.sendAllContainer {
+  margin-bottom: 16px;
+}
+.amountContainer .sendInputWrapper {
+  width: 193px;
+}
+.amountContainer .percentOfBalance {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--grey-5);
+}
+.amountContainer .percentOfBalance.error {
+  color: var(--error-text-color);
+}
+.amountContainer .dcrInput {
+  font-size: 13px;
+}
+
+.destinationContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.sendInputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.sendInputWrapper.from {
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-direction: row;
+}
+.sendInputWrapper .inputErrorsArea {
+  margin-bottom: -14px;
+}
+.amountInputLabel,
+.addressInputLabel {
+  line-height: 16px;
+  font-size: 13px;
+  color: var(--grey-7) !important;
+}
+.sendIcons {
+  display: flex;
+  flex-direction: row;
+}
+
+.sendAll {
+  border-bottom: 1px var(--stroke-color-default) solid;
+  text-align: right;
+  background-color: var(--disabled-background-color);
+  font-size: 14px;
+  line-height: 15px;
+  padding: 4px 2px 4px 2px;
+}
+
+.tooltipSendAll {
+  width: 22rem;
+}
+
+.tooltipSendAllDisabled,
+.tooltipSendToSelf {
+  width: 18rem;
+}
+
+.tooltipAddInput {
+  width: max-content;
+}
+.tooltipDeleteInput {
+  width: max-content;
+}
+
+.sendInputWrapper.address {
+  position: relative;
+  width: 100%;
+  margin-right: 10px;
+  line-height: 23px;
+}
+
+.receiveAccountSelect {
+  width: 350px;
+  margin-bottom: 16px;
+}
+
+.addressInput {
+  padding-right: 22px;
+}
+.addressInput.error {
+  padding-right: 39px;
+}
+.pasteButton {
+  font-family: var(--font-family-regular);
+  padding: 3px 10px !important;
+  font-size: 13px !important;
+  line-height: 16px !important;
+  transition: none !important;
+}
+.clearAddressButton {
+  width: 14px;
+  background-image: var(--indicator-invalid-icon);
+  height: 16px;
+  border: none !important;
+  padding: 0 !important;
+  transition: none !important;
+  background-size: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-back-color) !important;
+}
+.clearAddressButton:hover {
+  opacity: 0.85;
+}
+
+@media (--bg-viewport) {
+  .amountContainer .sendInputWrapper {
+    width: 185px;
+  }
+  .sendOutputContainer {
+    margin: 20px 0 20px 20px;
+    width: 360px;
+  }
+  .receiveAccountSelect {
+    width: 301px;
+  }
+}
+@media (--sm-viewport) {
+  .sendOutputContainer {
+    padding: 0;
+    margin: 10px;
+    border: none;
+    width: 335px;
+  }
+  .addressInput {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .amountContainer .sendInputWrapper {
+    width: 175px;
+  }
+}

@@ -1,0 +1,19 @@
+.backButtonArea {
+  position: absolute;
+  top: 66px;
+  right: 0;
+}
+
+@media (--bg-viewport) {
+  .backButtonArea {
+    left: 622px;
+    right: initial;
+  }
+}
+
+@media (--sm-viewport) {
+  .backButtonArea {
+    top: 30px;
+    left: 342px;
+  }
+}

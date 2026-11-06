@@ -1,0 +1,9 @@
+.infoDocumentation:not(.constitution) {
+  margin-bottom: 20px;
+}
+
+@media (--xs-viewport) {
+  .infoDocumentation:not(.constitution) {
+    column-count: 1;
+  }
+}

@@ -1,0 +1,62 @@
+[main]
+host = https://www.transifex.com
+
+[decrediton.backupinfomd]
+file_filter = app/i18n/docs/<lang>/LN/BackupInfo.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.decrediton]
+file_filter = app/i18n/po/decrediton.<lang>.po
+source_lang = en
+minimum_perc = 30
+type = PO
+
+[decrediton.lnforceclosechannelmd]
+file_filter = app/i18n/docs/<lang>/Warnings/LNForceCloseChannel.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.lnwalletcreationmd]
+file_filter = app/i18n/docs/<lang>/Warnings/LNWalletCreation.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.mixerintroductionmd]
+file_filter = app/i18n/docs/<lang>/Warnings/MixerIntroduction.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.seedcopymd]
+file_filter = app/i18n/docs/<lang>/Warnings/SeedCopy.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.trezorfirmwareupdatemd]
+file_filter = app/i18n/docs/<lang>/Warnings/TrezorFirmwareUpdate.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.trezorwalletcreationpassphrasemd]
+file_filter = app/i18n/docs/<lang>/Warnings/TrezorWalletCreationPassPhrase.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.trezorwipemd]
+file_filter = app/i18n/docs/<lang>/Warnings/TrezorWipe.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN
+
+[decrediton.walletcreationmd]
+file_filter = app/i18n/docs/<lang>/Warnings/WalletCreation.md
+source_lang = en
+minimum_perc = 80
+type = GITHUBMARKDOWN

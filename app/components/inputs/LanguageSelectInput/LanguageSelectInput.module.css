@@ -1,0 +1,71 @@
+.label {
+  display: flex;
+}
+
+.flag {
+  background-repeat: no-repeat;
+  background-size: 20px 13px;
+  width: 25px;
+  min-width: 25px;
+  background-position: left center;
+}
+
+.flag.ar {
+  background-image: var(--flag-ar);
+}
+
+.flag.en-AU {
+  background-image: var(--flag-au);
+}
+
+.flag.de {
+  background-image: var(--flag-de);
+}
+
+.flag.en {
+  background-image: var(--flag-en);
+}
+
+.flag.en-GB {
+  background-image: var(--flag-gb);
+}
+
+.flag.es {
+  background-image: var(--flag-es);
+}
+
+.flag.it {
+  background-image: var(--flag-it);
+}
+
+.flag.fr {
+  background-image: var(--flag-fr);
+}
+
+.flag.ja {
+  background-image: var(--flag-ja);
+}
+
+.flag.pl {
+  background-image: var(--flag-pl);
+}
+
+.flag.dev,
+.flag.pt-BR {
+  background-image: var(--flag-ptbr);
+}
+
+.flag.zh {
+  background-image: var(--flag-zh);
+}
+
+.flag.zh-HK {
+  background-image: var(--flag-hk);
+}
+
+.option,
+.singleValue {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,5 @@
+Przy zakupie biletu, koszt biletu zostaje zablokowany w portfelu do momentu wykorzystania go do głosowania lub jego odwołania. Bilety wchodzą do mempoola, a następnie do puli biletowej, z której są losowane i wybierane do głosowania. Istnieje 99,5% prawdopodobieństwo, że dany bilet zagłosuje. Przeciętny bilet zagłosuje w ciągu 28 dni, ale bilety, które nadal znajdują się w puli, lecz nie zostały wylosowane w ciągu 142 dni, są z puli wycofane. DCR użyte do zakupu biletu jest zwolnione z blokady, gdy bilet zagłosuje lub zostanie wycofany.
+
+Gdy w systemie Politeia pod głosowanie zostaje poddana propozycja, system robi migawkę stanu puli biletowej. Wszystkie znajdujące się w tym czasie w puli bilety mają prawo do głosowania nad propozycją w procesie odbywającym się poza łańcuchem.
+
+Ponieważ proces uwierzytelniania bloków jest niezmienny, decyzje podjęte przez wszystkie bilety mogą być publicznie śledzone. Aktywny udział w stakingu pomaga zabezpieczyć sieć Decred, zapewnić jakość Proof-of-Work i określić przyszły kierunek projektu.

@@ -1,0 +1,14 @@
+.body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 30px 60px 30px 60px;
+  background-color: var(--background-container);
+  height: 100%;
+}
+
+@media (--bg-viewport) {
+  .body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

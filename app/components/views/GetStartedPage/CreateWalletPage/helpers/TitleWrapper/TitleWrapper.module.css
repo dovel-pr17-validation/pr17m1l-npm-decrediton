@@ -1,0 +1,10 @@
+.titleWrapper {
+  width: 692px;
+}
+
+@media (--sm-viewport) {
+  .titleWrapper {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

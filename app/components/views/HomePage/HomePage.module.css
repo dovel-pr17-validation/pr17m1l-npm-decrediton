@@ -1,0 +1,248 @@
+.isRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.overviewHeader {
+  padding-left: 60px;
+  padding-top: 40px;
+  padding-right: 56px;
+  flex-flow: column wrap;
+  background-color: var(--background-back-color);
+}
+
+.overviewContentWrapper {
+  justify-content: space-between;
+  display: flex;
+  background-color: var(--background-back-color);
+  padding-left: 60px;
+}
+
+.overviewSpendableLockedWrapper {
+  padding: 0;
+}
+
+.overviewTransactionsTicket {
+  padding: 30px 60px;
+}
+
+.overviewBalance {
+  font-size: 42px;
+  color: var(--input-color-default);
+  font-family: var(--font-family-monospace);
+}
+
+.overviewBalanceLabel {
+  font-family: var(--font-family-regular);
+  color: var(--overview-balance-label);
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.overviewBalanceUnit {
+  font-size: 17px;
+  color: var(--input-color-default);
+}
+
+.overviewBalanceSpendableLocked {
+  font-family: var(--font-family-regular);
+  line-height: 13px;
+  color: var(--input-color-default);
+  padding-left: 10px;
+  margin-right: 2px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 7px;
+}
+
+.overviewBalanceSpendableLocked.amount {
+  font-size: 17px;
+  font-family: var(--font-family-monospace);
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.overviewBalanceSpendableLocked.active {
+  background-image: var(--legend-active);
+}
+
+.overviewBalanceSpendableLocked.voted {
+  background-image: var(--legend-voted);
+}
+
+.overviewBalanceSpendableLocked.received {
+  background-image: var(--legend-received);
+}
+
+.overviewBalanceSpendableLocked.sent {
+  background-image: var(--legend-sent);
+}
+
+.overviewBalanceSpendableLocked.available {
+  background-image: var(--legend-available);
+}
+
+.overviewBalanceSpendableLocked.locked {
+  background-image: var(--legend-locked);
+}
+
+.overviewBalanceSpendableLockedLabel {
+  color: var(--agenda-card-bottom-cfg);
+  font-family: var(--font-family-regular);
+  margin-left: 10px;
+  margin-top: 4px;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.overviewSpendableLockedWrapperArea {
+  margin-bottom: 14px;
+}
+
+.overviewSpendableLockedWrapperArea.tickets {
+  margin-bottom: 8px;
+}
+
+.tabsContent {
+  width: 100%;
+}
+
+.tabs {
+  top: -55px;
+  right: 50px;
+}
+
+.tabsWrapper {
+  height: 250px;
+}
+
+.balanceTooltip {
+  width: max-content;
+  max-width: max-content !important;
+  left: 90% !important;
+}
+
+.lockedBalanceTooltipGrid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+}
+
+.overviewLeftWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (--bg-viewport) {
+  .overviewTransactionsTicket {
+    padding: 30px 20px;
+  }
+
+  .overviewHeader {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .overviewContentWrapper {
+    padding-left: 20px;
+  }
+
+  .balanceTooltip {
+    left: 110% !important;
+  }
+}
+
+@media (--sm-viewport) {
+  .overviewTab {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .overviewTab.balance {
+    background-image: var(--tab-icon-balance);
+  }
+  .overviewTab.tickets {
+    background-image: var(--tab-icon-tickets);
+  }
+  .overviewTab.tx {
+    background-image: var(--tab-icon-transactions);
+  }
+
+  .overviewHeader {
+    padding-left: 11px;
+    padding-top: 40px;
+    padding-right: 0;
+  }
+
+  .overviewContentWrapper {
+    padding-left: 11px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .overviewSpendableLockedWrapper {
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 315px;
+    padding-left: 0;
+  }
+}
+
+@media (--sm-viewport) {
+  .overviewTab {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 16px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .balanceIcon {
+    color: transparent;
+    background-image: var(--tab-icon-balance);
+  }
+
+  .ticketsIcon {
+    color: transparent;
+    background-image: var(--tab-icon-tickets);
+  }
+
+  .txIcon {
+    color: transparent;
+    background-image: var(--tab-icon-transactions);
+  }
+
+  .overviewBalance {
+    font-size: 27px;
+  }
+  .overviewBalanceUnit {
+    font-size: 13px;
+  }
+
+  .overviewContentWrapper {
+    padding-left: 11px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .overviewTransactionsTicket {
+    padding: 20px 10px;
+  }
+  .overviewTransactionsTicket.isRow {
+    flex-flow: column wrap;
+  }
+
+  .homeContentTitle {
+    width: 355px;
+  }
+
+  .tabsWrapper {
+    height: 320px;
+  }
+}
