@@ -5,7 +5,7 @@ go 1.26.8
 require (
 	decred.org/dcrdex v1.0.6
 	github.com/decred/slog v1.2.0
-	github.com/jrick/logrotate v1.0.0
+	github.com/jrick/logrotate v1.1.2
 )
 
 require (
